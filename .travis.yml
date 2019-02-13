@@ -42,7 +42,6 @@ script:
 - BUILD_DIR=$PWD
 - set -e
 - JBROWSE_BUILD_MIN=0 ./setup.sh
-- cat setup.log
 - yarn lint
 - prove -Isrc/perl5 -r -j3 tests/perl_tests;
 - utils/jb_run.js -p 9000 & sleep 2
